@@ -1,0 +1,35 @@
+valores = [3,4,5]
+peso = [5,4,3]
+
+dicionario = dict(zip(valores,peso))
+
+soma_peso=0
+soma =0
+cont=0
+# Média aritmética
+
+for i in valores:
+    soma = soma + i
+    cont= cont + 1
+    media_a = soma/cont
+
+print(f"Valor da media simples: {media_a}")
+
+# Média harmonica
+soma=0
+for i in valores:
+    
+    soma = soma + 1/i
+    media_h = len(valores)/soma
+
+print(f"Valor da media harmonica: {media_h}")
+
+# Média ponderada
+soma=0
+for i in dicionario:
+    
+    soma += (i*dicionario[i])
+    soma_peso += dicionario[i]
+    media_p = soma/soma_peso
+
+print(f"Valor da media ponderada: {media_p}")
